@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AvatarImage: UIImageView {
+final class AvatarImage: UIImageView {
     @IBInspectable var borderColor: UIColor = .gray
     @IBInspectable var borderWidth: CGFloat = 1.5
     
@@ -19,7 +19,7 @@ class AvatarImage: UIImageView {
     }
 }
 
-class AvatarBackShadow: UIView {
+final class AvatarBackShadow: UIView {
     @IBInspectable var shadowColor: UIColor = .red
     @IBInspectable var shadowOffset: CGSize = CGSize(width: 0.0, height: -3)
     @IBInspectable var shadowOpacity: Float = 0.8

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A8013EC8278913C80012157D /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8013EC7278913C80012157D /* FriendModel.swift */; };
 		A8013ECA278913D50012157D /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8013EC9278913D50012157D /* GroupModel.swift */; };
+		A804C9B827B7BF2E00CAE053 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A804C9B727B7BF2E00CAE053 /* CustomSegue.swift */; };
+		A804C9BA27B7CC4800CAE053 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A804C9B927B7CC4800CAE053 /* CustomNavController.swift */; };
+		A804C9BC27B7CEE500CAE053 /* NavAnimators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A804C9BB27B7CEE500CAE053 /* NavAnimators.swift */; };
 		A80B41512789155600C66F43 /* FriendProfileCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B41502789155600C66F43 /* FriendProfileCollectionVC.swift */; };
 		A80F4853278DE56A00C1CC42 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F4852278DE56A00C1CC42 /* AvatarView.swift */; };
 		A80FDDD5279B156C0069F596 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80FDDD3279B156C0069F596 /* TableViewCell.swift */; };
@@ -44,6 +47,9 @@
 /* Begin PBXFileReference section */
 		A8013EC7278913C80012157D /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		A8013EC9278913D50012157D /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		A804C9B727B7BF2E00CAE053 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		A804C9B927B7CC4800CAE053 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
+		A804C9BB27B7CEE500CAE053 /* NavAnimators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAnimators.swift; sourceTree = "<group>"; };
 		A80B41502789155600C66F43 /* FriendProfileCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendProfileCollectionVC.swift; sourceTree = "<group>"; };
 		A80F4852278DE56A00C1CC42 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		A80FDDD3279B156C0069F596 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A804C9B627B7BEEA00CAE053 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				A804C9B727B7BF2E00CAE053 /* CustomSegue.swift */,
+				A804C9B927B7CC4800CAE053 /* CustomNavController.swift */,
+				A804C9BB27B7CEE500CAE053 /* NavAnimators.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		A80F4851278DE54700C1CC42 /* Hacks */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +141,7 @@
 		A8174EF8276DD23A007973EC /* VK Client */ = {
 			isa = PBXGroup;
 			children = (
+				A804C9B627B7BEEA00CAE053 /* Transitions */,
 				A8549D9027B43A36009A4C2F /* FullScreenFoto */,
 				A8E75C2227A1E047006316C9 /* Reusable headerFooter */,
 				A80F4851278DE54700C1CC42 /* Hacks */,
@@ -321,6 +338,7 @@
 				A8013EC8278913C80012157D /* FriendModel.swift in Sources */,
 				A80FDDD5279B156C0069F596 /* TableViewCell.swift in Sources */,
 				A80FDDD8279B17310069F596 /* SsecondTableViewController.swift in Sources */,
+				A804C9BA27B7CC4800CAE053 /* CustomNavController.swift in Sources */,
 				A8E75C2427A1E18D006316C9 /* HeaderFooter.swift in Sources */,
 				A8174EFE276DD23A007973EC /* LoginViewController.swift in Sources */,
 				A845D78E2771E2A5001C4284 /* AllGroupsTableVC.swift in Sources */,
@@ -333,7 +351,9 @@
 				A80B41512789155600C66F43 /* FriendProfileCollectionVC.swift in Sources */,
 				A8174EFC276DD23A007973EC /* SceneDelegate.swift in Sources */,
 				A8B5063527A48830006FA4DE /* IndexesTableViewController.swift in Sources */,
+				A804C9BC27B7CEE500CAE053 /* NavAnimators.swift in Sources */,
 				A845D78C2771E27E001C4284 /* MyGroupTableVC.swift in Sources */,
+				A804C9B827B7BF2E00CAE053 /* CustomSegue.swift in Sources */,
 				A80F4853278DE56A00C1CC42 /* AvatarView.swift in Sources */,
 				A824C69527A1F6A900C6A618 /* CollectionReusableView.swift in Sources */,
 				A8848AE42779950600CB161A /* MyGroupsCell.swift in Sources */,

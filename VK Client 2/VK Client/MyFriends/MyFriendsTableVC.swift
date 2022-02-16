@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyFriendsTableVC: UITableViewController, UISearchBarDelegate {
+final class MyFriendsTableVC: UITableViewController, UISearchBarDelegate {
     //MARK: Lifecicle
     
     

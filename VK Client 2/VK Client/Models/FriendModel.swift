@@ -30,4 +30,5 @@ var allFriend: [Friend] = [
     
     Friend(name: "dashi again", image: UIImage(named: "dashi2"), photoImages: []),
     
-    Friend(name: "xz", image: nil, photoImages: [])]
+    Friend(name: "xz", image: nil, photoImages: []),
+    Friend(name: "more dashi", image: UIImage(named: "more dashi"), photoImages: [])]

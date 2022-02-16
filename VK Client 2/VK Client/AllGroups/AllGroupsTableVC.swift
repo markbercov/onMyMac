@@ -8,7 +8,7 @@
 import UIKit
 
 
-class AllGroupsTableVC: UITableViewController, UISearchBarDelegate {
+final class AllGroupsTableVC: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet var searchBar: UISearchBar!
     

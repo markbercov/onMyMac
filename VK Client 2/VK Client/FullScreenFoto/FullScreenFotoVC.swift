@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FullScreenFotoVC: UIViewController {
+    final class FullScreenFotoVC: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
     var fotos: Friend?
@@ -47,30 +47,81 @@ class FullScreenFotoVC: UIViewController {
 
 extension FullScreenFotoVC {
     @objc func didRightSwipe(_ swipe: UISwipeGestureRecognizer) {
-//        guard index >= 0,
-//              index < (fotos?.photoImages.count)!
-//        else { return }
-//
-//        imageView.image = fotos?.photoImages[index - 1]
-       // index -= 1
-        print("r")
-        UIView.animateKeyframes(withDuration: 1, delay: 0, options: .calculationModeCubicPaced) {
-            guard self.index >= 0,
-                  self.index < (self.fotos?.photoImages.count)!
-            else { return }
-            self.imageView.image = self.fotos?.photoImages[self.index - 1]
-            self.index -= 1
-        }
 
+        guard index > 0 else { return }
+        
+        let newImage = fotos?.photoImages[index - 1]
+        
+        let newTemporaryImageView = UIImageView()
+        newTemporaryImageView.backgroundColor = view.backgroundColor
+        newTemporaryImageView.contentMode = .scaleAspectFit
+        newTemporaryImageView.image = newImage
+       
+        newTemporaryImageView.frame = imageView.frame
+       
+        newTemporaryImageView.frame.origin.x -= imageView.frame.width
+        
+        view.addSubview(newTemporaryImageView)
+       
+        UIView.animateKeyframes(withDuration: 1, delay: 0, options: []) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.3) {
+                
+                self.imageView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 0.7) {
+               
+                newTemporaryImageView.frame.origin.x = 0
+            }
+        } completion: { _ in
+            
+            self.index -= 1
+           
+            self.imageView.image = newImage
+          
+            self.imageView.transform = .identity
+            
+            newTemporaryImageView.removeFromSuperview()
+        }
     }
+        
+
     
     @objc func didLeftSwipe(_ swipe: UISwipeGestureRecognizer) {
-        guard index >= 0,
-              index < (fotos?.photoImages.count)!
-        else { return }
-        imageView.image = fotos?.photoImages[index + 1]
-        index += 1
-        print("l")
         
+        guard fotos?.photoImages.count ?? 0 > index + 1 else { return }
+        
+        let newImage = fotos?.photoImages[index + 1]
+        
+        let newTemporaryImageView = UIImageView()
+        newTemporaryImageView.backgroundColor = view.backgroundColor
+        newTemporaryImageView.contentMode = .scaleAspectFit
+        newTemporaryImageView.image = newImage
+       
+        newTemporaryImageView.frame = imageView.frame
+       
+        newTemporaryImageView.frame.origin.x += imageView.frame.width
+        
+        view.addSubview(newTemporaryImageView)
+       
+        UIView.animateKeyframes(withDuration: 1, delay: 0, options: []) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.3) {
+                
+                self.imageView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 0.7) {
+               
+                newTemporaryImageView.frame.origin.x = 0
+            }
+        } completion: { _ in
+            
+            self.index += 1
+           
+            self.imageView.image = newImage
+          
+            self.imageView.transform = .identity
+            
+            newTemporaryImageView.removeFromSuperview()
+        }
     }
+        
 }

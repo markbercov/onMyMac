@@ -46,18 +46,7 @@ final class FriendProfileCollectionCell: UICollectionViewCell {
         self.botLabel.text = bot
     }
     
-//     func animateAuthButton() {
-//        let animation = CASpringAnimation(keyPath: "transform.scale")
-//        animation.fromValue = 0
-//        animation.toValue = 1
-//        animation.stiffness = 200
-//        animation.mass = 1.5
-//        animation.duration = 1
-//        //animation.beginTime = CACurrentMediaTime()
-//        animation.fillMode = CAMediaTimingFillMode.backwards
-//
-//        self.friendImage?.layer.add(animation, forKey: nil)
-//    }
+
     
     private func animatecountLikesLabel() {
         let animation = CASpringAnimation(keyPath: "transform.scale")

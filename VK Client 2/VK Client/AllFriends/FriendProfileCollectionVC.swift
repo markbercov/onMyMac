@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FriendProfileCollectionVC: UICollectionViewController {
+final class FriendProfileCollectionVC: UICollectionViewController {
 
     var friend: Friend?
     

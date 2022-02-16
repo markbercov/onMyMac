@@ -7,10 +7,10 @@
 
 import UIKit
 
-class TapsImage: UIImageView {
+final class TapsImage: UIImageView {
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = bounds.width / 2
+       // layer.cornerRadius = bounds.width / 2
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

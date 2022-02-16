@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllGroupsCell: UITableViewCell {
+final class AllGroupsCell: UITableViewCell {
 
     @IBOutlet var groupImage: AvatarImage!
     

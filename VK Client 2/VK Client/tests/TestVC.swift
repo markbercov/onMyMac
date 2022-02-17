@@ -16,7 +16,7 @@ class TestVC: UIViewController {
     @IBAction func tap(_ sender: Any) {
        animate0()
         animateLoad()
-
+        
     }
     
     @IBOutlet var cir3: UIImageView!
@@ -91,5 +91,7 @@ class TestVC: UIViewController {
     func animate4() {
         
     }
+    
+    
 }
 

@@ -43,6 +43,7 @@ final class AllGroupsTableVC: UITableViewController, UISearchBarDelegate {
         searchBar.delegate = self
         
         addMass()
+        
     }
     
     

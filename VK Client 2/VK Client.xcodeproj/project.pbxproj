@@ -24,6 +24,8 @@
 		A8174F01276DD23A007973EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8174EFF276DD23A007973EC /* Main.storyboard */; };
 		A8174F03276DD23B007973EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8174F02276DD23B007973EC /* Assets.xcassets */; };
 		A8174F06276DD23B007973EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8174F04276DD23B007973EC /* LaunchScreen.storyboard */; };
+		A821806427BD19AD0082A65B /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821806327BD19AD0082A65B /* Singleton.swift */; };
+		A821806727BD23D20082A65B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821806627BD23D20082A65B /* NetworkService.swift */; };
 		A824C69527A1F6A900C6A618 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824C69327A1F6A900C6A618 /* CollectionReusableView.swift */; };
 		A824C69627A1F6A900C6A618 /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A824C69427A1F6A900C6A618 /* CollectionReusableView.xib */; };
 		A845D7862771DEE7001C4284 /* MyFriendsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A845D7852771DEE7001C4284 /* MyFriendsTableVC.swift */; };
@@ -64,6 +66,8 @@
 		A8174F02276DD23B007973EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8174F05276DD23B007973EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8174F07276DD23B007973EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A821806327BD19AD0082A65B /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		A821806627BD23D20082A65B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A824C69327A1F6A900C6A618 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		A824C69427A1F6A900C6A618 /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		A845D7852771DEE7001C4284 /* MyFriendsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyFriendsTableVC.swift; path = "VK Client/MyFriends/MyFriendsTableVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -100,6 +104,7 @@
 			children = (
 				A8013EC7278913C80012157D /* FriendModel.swift */,
 				A8013EC9278913D50012157D /* GroupModel.swift */,
+				A821806327BD19AD0082A65B /* Singleton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 		A8174EF8276DD23A007973EC /* VK Client */ = {
 			isa = PBXGroup;
 			children = (
+				A821806527BD23B00082A65B /* Services */,
 				A804C9B627B7BEEA00CAE053 /* Transitions */,
 				A8549D9027B43A36009A4C2F /* FullScreenFoto */,
 				A8E75C2227A1E047006316C9 /* Reusable headerFooter */,
@@ -184,6 +190,14 @@
 				A8174EFF276DD23A007973EC /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A821806527BD23B00082A65B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A821806627BD23D20082A65B /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A8549D9027B43A36009A4C2F /* FullScreenFoto */ = {
@@ -341,10 +355,12 @@
 				A804C9BA27B7CC4800CAE053 /* CustomNavController.swift in Sources */,
 				A8E75C2427A1E18D006316C9 /* HeaderFooter.swift in Sources */,
 				A8174EFE276DD23A007973EC /* LoginViewController.swift in Sources */,
+				A821806727BD23D20082A65B /* NetworkService.swift in Sources */,
 				A845D78E2771E2A5001C4284 /* AllGroupsTableVC.swift in Sources */,
 				A8174EFA276DD23A007973EC /* AppDelegate.swift in Sources */,
 				A888AD2C279E069300AC32A3 /* FirstTableViewController.swift in Sources */,
 				A8B277F027AD3D00008EA53D /* TapsImage.swift in Sources */,
+				A821806427BD19AD0082A65B /* Singleton.swift in Sources */,
 				A8549D9227B43A6D009A4C2F /* FullScreenFotoVC.swift in Sources */,
 				A8848AE82779952100CB161A /* AllGroupsCell.swift in Sources */,
 				A8013ECA278913D50012157D /* GroupModel.swift in Sources */,

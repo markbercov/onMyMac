@@ -34,6 +34,7 @@ final class LoginViewController: UIViewController {
                 UITapGestureRecognizer(
                     target: self,
                     action: #selector(hideKeyboard)))
+        Singleton.instance.token = "asas"
     }
     
     override func viewDidAppear(_ animated: Bool) {
